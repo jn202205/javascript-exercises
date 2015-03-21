@@ -8,7 +8,7 @@
 Function.prototype.myBind = function(context) {
   var fn = this;
   return function () {
-    fn.apply(context);
+    return fn.apply(context);
   };
 };
 
@@ -20,7 +20,6 @@ function times(num, fun) {
 
 var cat = {
   age: 5,
-
   ageOneYear: function () {
     console.log(this.age += 1);
   }
